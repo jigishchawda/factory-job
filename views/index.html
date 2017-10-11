@@ -1,0 +1,86 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Metal Factory
+      </h1>
+    </header>
+
+    <main>
+      
+      <section id="supervisor-related">
+        <section id="login">
+          <form>
+            <label>Username</label>
+            <input type="text">
+
+            <label>Password</label>
+            <input type="passsord">
+
+            <input type="button" onsubmit="login" value="Login">
+          </form>
+        </section>
+
+        {% if isLoggedIn %}
+          <section id="loggedIn">
+            <input type="button" value="New Job">
+            <input type="button" value="Logout">
+          </section>
+        {% endif %}
+        
+
+      </section>
+      <section class="jobs">
+        <p>All the jobs</p>
+        <table border="1" style="width:600px">
+          <thead>
+            <tr>
+              <th> Date </th>
+              <th> Due Date </th>
+              <th> Customer Name </th>
+              <th> Sales Person </th>
+              <th> Assignee / Production By </th>
+              <th> Status </th>
+              <th> Job #</th>
+              <th> Sales No.</th>
+              <th> Supervisor Name </th>
+            </tr>
+          </thead>
+          
+        </table>
+        <section id="no-data">
+            <p>
+              No jobs in queue.
+            </p>
+          </section>
+      </section>
+    </main>
+
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>

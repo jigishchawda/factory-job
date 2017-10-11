@@ -1,0 +1,8 @@
+Must have:
+* job number (automatically generated)
+
+Workflow:
+* sales person hands in paper to supervisor (total 3 supervisors)
+* supervisor will enter data to the system (requires him to login)
+* jobs assign to who (new name or drop down list of previously entered names)
+* everybody can view, sortable by descending due date with status
